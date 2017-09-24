@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Blockly Demo: Fixed Blockly</title>
+    <script src="blockly_compressed.js"></script>
+    <script src="blocks_compressed.js"></script>
+    <script src="javascript_compressed.js"></script>
+    <script src="msg/js/en.js"></script>
+    <script src="custom.js"></script>
+
+    <style>
+        body {
+            background-color: #fff;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p><button onclick="runCode()">Run Code</button></p>
+
+    <div id="blocklyDiv" style="height: 480px; width: 800px;"></div>
+
+    <xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+        <block type="custome_block">
+            <value name="NAME">
+                <block type="custome_block" id="}T6_Moc0]?Ch.c5~Aa+4" x="88" y="63"></block>
+            </value>
+        </block>
+    </xml>
+
+    <script>
+        var workspace = Blockly.inject('blocklyDiv', {
+            media: 'media',
+            toolbox: document.getElementById('toolbox')
+        });
+        Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
+            workspace);
+    </script>
+
+</body>
+
+</html>
